@@ -1,5 +1,5 @@
 # Minicurso-python
-####Pedra papel e tesoura com interface grafica utilizando python
+####Pedra papel e tesoura com interface grafica utilizando python<br/>
 ===================|📚Introdução📚|=====================<br/>
 O projeto Roadmap Python é destinado as pessoas que aprenderam python tanto na graduação quanto no tecnico consigam aprender para treinar suas habilidades. Na live reproduziremos o jogo pedra papel e tesoura de forma rápida e fácil de aprender, utilizando a nossa querida linguagem de programação python.
 Neste Readme você irá encontrar todos os conceitos abordados na live ,de uma forma textual e didatica.
