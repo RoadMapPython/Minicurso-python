@@ -24,15 +24,12 @@ from random import randint
 from PIL import ImageTk,Image
 from tkinter import *
 
-
-
 tela=Tk()
 
 maquina = randint(1,3)
 # 1- Pedra , 2 - Papel e 3 - Tesoura 
 
 print(maquina)
-
 
 # Função Pedra
 def Pedra():
