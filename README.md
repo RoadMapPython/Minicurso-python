@@ -17,7 +17,7 @@ print("-"*15)<br/>
 Jogador = int(input("Escolha uma das opções"))<br/>
 <br/>
 
-Ok agora nosso jogador pode escolher umas das 3 opções
+Ok agora nosso jogador pode escolher uma das 3 opções
 
 ====================|⚙️1° Código completo⚙️|======================<br/>
 from random import randint from time import sleep
