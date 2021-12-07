@@ -5,7 +5,7 @@ O projeto Roadmap Python é destinado as pessoas que aprenderam python tanto na 
 Neste Readme você irá encontrar todos os conceitos abordados na live ,de uma forma textual e didatica.
 
 Nesse primeiro momento realizaremos a criação de um jogo de Pedra, Papel e Tesoura de uma forma mais simples sem interface grafica.
-Obs: o código completo e o dicionario ficam no final do Readme
+Obs: o código completo e o dicionario ficam no final do Readme<br/>
 ====================|⚙️Construindo o código⚙️|=====================<br/>
 Primeiro iremos perguntar ao usuário o que ele vai escolher<br/>
 
