@@ -1,5 +1,5 @@
 # Minicurso-python
-####Pedra papel e tesoura com interface grafica utilizando python<br/>
+##Pedra papel e tesoura com interface grafica utilizando python<br/>
 
 ===================|📚Introdução📚|=====================<br/>
 O projeto Roadmap Python é destinado as pessoas que aprenderam python tanto na graduação quanto no tecnico consigam aprender para treinar suas habilidades. Na live reproduziremos o jogo pedra papel e tesoura de forma rápida e fácil de aprender, utilizando a nossa querida linguagem de programação python.
@@ -9,6 +9,78 @@ Nesse primeiro momento realizaremos a criação de um jogo de Pedra, Papel e Tes
 Obs: o código completo e o dicionario ficam no final do Readme<br/>
 
 ====================|⚙️Construindo o código⚙️|=====================<br/>
+* Em um primeiro momento pedimos que o usuário escolha uma das 3 opções , 
+```
+from random import randint<br/>
+print("-"*15)<br/>
+print("1 - Pedra\n2 - Papel\n3 - Tesoura")<br/>
+print("-"*15)<br/>
+jogador = int(input("Escolha uma das opções"))<br/>
+```
+<br/>
+
+* Utilizamos o randit para a maquina também escolher uma das 3 de forma randomica.<br/>
+```maquina = randint(1, 3)```
+<br/>
+
+* Agora criaremos 3 funções com nossos if e elif desisivos para o funcionamento do código
+```
+def Pedra():
+def Papel():
+def Tesoura():
+```
+
+* Cada if chama uma dessas funçôes caso o jogador escolha entre Pedra/Papel/Tesoura<br/>
+_Qual o motivo dos ifs decisivos ficarem depois das funções?<br/>
+As funções elas devem ser declaradas antes de serem chamadas no código,para assim ter o funcionamento de tal,
+se fosse ao contrário apareceria um erro dizendo que nao foi declarada a função._<br/>
+```
+if jogador == 1:
+    Pedra()
+elif jogador == 2:
+    Papel()
+elif jogador == 3:
+    Tesoura
+```
+<br/>
+
+* Agora com a criação de 3 ifs chamando cada uma das funções, iremos colocar nas possibilidades de resposta da máquina
+```
+def Pedra():
+    print('Você jogou pedra')
+    if maquina == 1:
+        print("empate")
+    elif maquina == 2:
+        print("derrota")
+        print("a maquina jogou papel")
+    elif maquina == 3:
+        print("Vitoria")
+        print("a maquina jogou tesoura")
+
+
+def Papel():
+    print("Você escolheu papel")
+    if maquina == 2:
+        print("empate")
+    elif maquina == 1:
+        print("Vitoria")
+    elif maquina == 3:
+        print("Derrota")
+
+
+def Tesoura():
+    print("Voce jogou Tesoura")
+    if maquina == 3:
+        print("Empate")
+    elif maquina == 1:
+        print("Derrota")
+    elif maquina == 2:
+        print("Vitoria")
+ ```
+
+Pronto ,nosso código em python de uma forma simples.
+Agora iremos transformar isso tudo em 
+
 ====================|⚙️Código Sem interface⚙️|=====================<br/>
 from random import randint
 print("-"*15)
