@@ -9,15 +9,56 @@ Nesse primeiro momento realizaremos a criação de um jogo de Pedra, Papel e Tes
 Obs: o código completo e o dicionario ficam no final do Readme<br/>
 
 ====================|⚙️Construindo o código⚙️|=====================<br/>
-Primeiro iremos perguntar ao usuário o que ele vai escolher<br/>
+====================|⚙️Código Sem interface⚙️|=====================<br/>
+from random import randint
+print("-"*15)
+print("1 - Pedra\n2 - Papel\n3 - Tesoura")
+print("-"*15)
+jogador = int(input("Escolha uma das opções"))
 
-print("-"*15)<br/>
-print("1 - Pedra\n2 - Papel\n3 - Tesoura")<br/>
-print("-"*15)<br/>
-Jogador = int(input("Escolha uma das opções"))<br/>
-<br/>
+maquina = randint(1, 3)
 
-Ok agora nosso jogador pode escolher uma das 3 opções
+print(maquina)
+
+
+def Pedra():
+    print('Você jogou pedra')
+    if maquina == 1:
+        print("empate")
+    elif maquina == 2:
+        print("derrota")
+        print("a maquina jogou papel")
+    elif maquina == 3:
+        print("Vitoria")
+        print("a maquina jogou tesoura")
+
+
+def Papel():
+    print("Você escolheu papel")
+    if maquina == 2:
+        print("empate")
+    elif maquina == 1:
+        print("Vitoria")
+    elif maquina == 3:
+        print("Derrota")
+
+
+def Tesoura():
+    print("Voce jogou Tesoura")
+    if maquina == 3:
+        print("Empate")
+    elif maquina == 1:
+        print("Derrota")
+    elif maquina == 2:
+        print("Vitoria")
+
+
+if jogador == 1:
+    Pedra()
+elif jogador == 2:
+    Papel()
+elif jogador == 3:
+    Tesoura
 
 ====================|⚙️Código completo⚙️|======================<br/>
 from random import randint
