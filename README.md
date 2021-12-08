@@ -9,129 +9,87 @@ Nesse primeiro momento realizaremos a criação de um jogo de Pedra, Papel e Tes
 Obs: o código completo e o dicionario ficam no final do Readme<br/>
 
 ====================|⚙️Construindo o código⚙️|=====================<br/>
-* Em um primeiro momento pedimos que o usuário escolha uma das 3 opções , 
+Esta é uma leitura do código de cima a baixo.
+
+* Iniciaremos com a importação das bibliotecas que utilizaremos ao decorrer do código
 ```
-from random import randint<br/>
-print("-"*15)<br/>
-print("1 - Pedra\n2 - Papel\n3 - Tesoura")<br/>
-print("-"*15)<br/>
-jogador = int(input("Escolha uma das opções"))<br/>
-```
-<br/>
-
-* Utilizamos o randit para a maquina também escolher uma das 3 de forma randomica.<br/>
-```maquina = randint(1, 3)```
-<br/>
-
-* Agora criaremos 3 funções com nossos if e elif desisivos para o funcionamento do código
-```
-def Pedra():
-def Papel():
-def Tesoura():
-```
-
-* Cada if chama uma dessas funçôes caso o jogador escolha entre Pedra/Papel/Tesoura<br/>
-_Qual o motivo dos ifs decisivos ficarem depois das funções?<br/>
-As funções elas devem ser declaradas antes de serem chamadas no código,para assim ter o funcionamento de tal,
-se fosse ao contrário apareceria um erro dizendo que nao foi declarada a função._<br/>
-```
-if jogador == 1:
-    Pedra()
-elif jogador == 2:
-    Papel()
-elif jogador == 3:
-    Tesoura
-```
-<br/>
-
-* Agora com a criação de 3 ifs chamando cada uma das funções, iremos colocar nas possibilidades de resposta da máquina
-```
-def Pedra():
-    print('Você jogou pedra')
-    if maquina == 1:
-        print("empate")
-    elif maquina == 2:
-        print("derrota")
-        print("a maquina jogou papel")
-    elif maquina == 3:
-        print("Vitoria")
-        print("a maquina jogou tesoura")
-
-
-def Papel():
-    print("Você escolheu papel")
-    if maquina == 2:
-        print("empate")
-    elif maquina == 1:
-        print("Vitoria")
-    elif maquina == 3:
-        print("Derrota")
-
-
-def Tesoura():
-    print("Voce jogou Tesoura")
-    if maquina == 3:
-        print("Empate")
-    elif maquina == 1:
-        print("Derrota")
-    elif maquina == 2:
-        print("Vitoria")
- ```
-
-Pronto ,nosso código em python de uma forma simples.
-Agora iremos transformar isso tudo em 
-
-====================|⚙️Código Sem interface⚙️|=====================<br/>
 from random import randint
-print("-"*15)
-print("1 - Pedra\n2 - Papel\n3 - Tesoura")
-print("-"*15)
-jogador = int(input("Escolha uma das opções"))
+```
+_O randint vai ser para pegar um numero aleatório que desejamos_
 
-maquina = randint(1, 3)
+```
+from PIL import ImageTk,Image
+```
+_Python image library(PIL) , vai servir para exibirmos as nossas imagens_
 
+```
+from tkinter import *
+```
+_O Tkinter vai servir para a exibição e funcionamento de nossa interface grafica_
+
+* Agora a maquina vai escolher uma opção
+```
+tela=Tk()
+maquina=randint(1,3)
 print(maquina)
+```
+_Utilizamos randint para que seja escolhido à maquina um número aleatório de 1 a 3_
+_1-Pedra 2-Papel 3-Tesoura_
 
+* Agora criaremos 3 funções com cada opção do jogador
+_Obs: a função deve ser declarada antes de ser chamada por isso vem primeiro_
 
+```
 def Pedra():
-    print('Você jogou pedra')
+
+    jogadajogador["text"]="Voce jogou Pedra"
+
     if maquina == 1:
-        print("empate")
+        Empate["text"]="Empate"
+        jogadamaquina["text"]="A maquina jogou Pedra"
+        
     elif maquina == 2:
-        print("derrota")
-        print("a maquina jogou papel")
-    elif maquina == 3:
-        print("Vitoria")
-        print("a maquina jogou tesoura")
+        Derrota["text"]="Derrota"
+        jogadamaquina["text"]="A maquina jogou Papel"
+        
+    elif  maquina == 3:
+        Vitoria["text"]="Vitoria"
+        jogadamaquina["text"]="A maquina jogou Tesoura"
+```
 
-
+```
 def Papel():
-    print("Você escolheu papel")
+    jogadajogador["text"]="Você jogou Papel"
+    
     if maquina == 2:
-        print("empate")
-    elif maquina == 1:
-        print("Vitoria")
+        Empate["text"]="Empate"
+        jogadamaquina["text"]="A maquina jogou Papel"
+        
     elif maquina == 3:
-        print("Derrota")
-
-
-def Tesoura():
-    print("Voce jogou Tesoura")
-    if maquina == 3:
-        print("Empate")
+        Derrota["text"]="Derrota"
+        jogadamaquina["text"]="A maquina jogou Tesoura"
+        
     elif maquina == 1:
-        print("Derrota")
-    elif maquina == 2:
-        print("Vitoria")
+        Vitoria["text"]="Vitoria"
+        jogadamaquina["text"]="A maquina jogou Pedra"
+```
+```
+def Tesoura():
 
+    jogadajogador["text"]="Voce jogou Tesoura"
 
-if jogador == 1:
-    Pedra()
-elif jogador == 2:
-    Papel()
-elif jogador == 3:
-    Tesoura
+    if maquina ==3:
+        Empate["text"]="Empate"
+        jogadamaquina["text"]="A maquina jogou Tesoura"
 
+    elif maquina==1:
+        Derrota["text"]="Derrota"
+        jogadamaquina["text"]="A maquina jogou Pedra"
+
+    elif maquina==2:
+        Vitoria["text"]="Vitoria"
+        jogadamaquina["text"]="A maquina jogou Papel" 
+ ```
 ====================|⚙️Código completo⚙️|======================<br/>
 from random import randint
 from PIL import ImageTk,Image
