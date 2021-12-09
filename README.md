@@ -91,6 +91,7 @@ def Tesoura():
         jogadamaquina["text"]="A maquina jogou Papel" 
  ```
 ====================|⚙️Código completo⚙️|======================<br/>
+```
 from random import randint
 from PIL import ImageTk,Image
 from tkinter import *
@@ -205,6 +206,7 @@ Sair.place(x=300,y=400)
 tela.geometry("800x400+0+0")
 tela.configure(background="#800080")
 tela.mainloop()<br/>
+```
 ======================================================================<br/>
 ---Dicionário---<br/>
 <br/>
