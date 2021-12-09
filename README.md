@@ -15,7 +15,8 @@ Esta é uma leitura do código de cima a baixo.
 ```
 from random import randint
 ```
-_O randint vai ser para pegar um numero aleatório que desejamos_
+_O modulo random  tem várias funções uteis para usarmos, mas neste momento usaremos o_
+_randint que vai ser para pegar um numero aleatório que desejamos_
 
 ```
 from PIL import ImageTk,Image
