@@ -91,6 +91,32 @@ def Tesoura():
         Vitoria["text"]="Vitoria"
         jogadamaquina["text"]="A maquina jogou Papel" 
  ```
+ Como iremos utilizar interface gráfica , ao inves de print colocamos Text["text"]="Texto exibido"
+ 
+ ```
+photo = PhotoImage(file="pedra.png")
+photoimage=photo1.subsample(3,3)
+
+botao=Button(tela,image=photo1,command=Pedra)
+botao.place(x=100,y=100)
+
+photo1 =PhotoImage(file="papel.png")
+photoimage=photo.subsample(10,5)
+
+botao1=Button(tela,image=photo,command=Papel)
+botao1.place(x=300,y=100)
+
+
+photo2= PhotoImage(file="tesoura.png")
+photoimage=photo2.subsample(1,1)
+
+botao2=Button(tela,image=photo2,command=Tesoura)
+botao2.place(x=500,y=100)
+ ```
+_Criamos 3 botoes com fotos representativas , e com uma determinada posição na nossa interface grafica._
+
+```
+```
 ====================|⚙️Código completo⚙️|======================<br/>
 ```
 from random import randint
@@ -210,8 +236,21 @@ tela.mainloop()<br/>
 ```
 ======================================================================<br/>
 ---Dicionário---<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
+| Inglês    | Português      |
+|-----------|----------------|
+|Random| Aleatório|
+|text| Texto|
+|Photo| Foto |
+|Button| Botão|
+|Label| Etiqueta|
+|Mainloop| Laço principal|
+|Background| Plano de fundo|
+|Foreground| Primeiro plano (letra)|
+|Width| Largura|
+|Height| Altura|
+|Anchor| Ancora|
+|Green| Verde|
+|Red| Vermelho|
+|Gray| Cinza|
+|Exit|Sair|
+|Place| Colocar|
